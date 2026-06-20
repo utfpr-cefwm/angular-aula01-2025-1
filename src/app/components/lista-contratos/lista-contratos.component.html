@@ -1,8 +1,9 @@
 <h2>Escolha o seu plano</h2>
 <div *ngFor="let contrato of contratosPossiveis">
   <a
-    href="#"
+    (click)="selecionarContrato(contrato)"
     class="contrato {{contrato.cor}}"
+    [class.selecionado]="contratoClicado === contrato"
   >
     {{ contrato.nome }}
   </a>

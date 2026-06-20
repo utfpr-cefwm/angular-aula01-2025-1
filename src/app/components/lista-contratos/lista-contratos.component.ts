@@ -1,4 +1,9 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Contrato } from '../../models/contrato';
@@ -19,4 +24,13 @@ export class ListaContratosComponent {
   })
   public contratosPossiveis!: Contrato[];
 
+  protected contratoClicado?: Contrato;
+
+  @Output()
+  public aoSelecionar = new EventEmitter<Contrato>();
+
+  public selecionarContrato(contrato: Contrato) {
+    this.aoSelecionar.emit(contrato);
+    this.contratoClicado = contrato;
+  }
 }

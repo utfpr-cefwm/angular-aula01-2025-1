@@ -1,7 +1,10 @@
-<app-consulta-saldo [contrato]="contratos[0]">
+<app-consulta-saldo [contrato]="contrato">
 </app-consulta-saldo>
 
-<app-lista-contratos [contratosPossiveis]="contratos">
+<app-lista-contratos
+  [contratosPossiveis]="contratos"
+  (aoSelecionar)="contrato = $event"
+>
 </app-lista-contratos>
 
 <router-outlet />

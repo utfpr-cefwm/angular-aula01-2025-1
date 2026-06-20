@@ -1,4 +1,9 @@
 .contrato {
   margin: .25em 0;
   text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+.contrato:hover, .contrato.selecionado {
+  opacity: 1;
 }
