@@ -4,6 +4,7 @@
     (click)="selecionarContrato(contrato)"
     class="contrato {{contrato.cor}}"
     [class.selecionado]="contratoClicado === contrato"
+    appVenderContrato
   >
     {{ contrato.nome }}
   </a>

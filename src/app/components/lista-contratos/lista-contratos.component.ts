@@ -7,12 +7,14 @@ import {
 import { CommonModule } from '@angular/common';
 
 import { Contrato } from '../../models/contrato';
+import { VenderContratoDirective } from '../../directives/vender-contrato.directive';
 
 @Component({
   selector: 'app-lista-contratos',
   standalone: true,
   imports: [
     CommonModule,
+    VenderContratoDirective,
   ],
   templateUrl: './lista-contratos.component.html',
   styleUrl: './lista-contratos.component.css',

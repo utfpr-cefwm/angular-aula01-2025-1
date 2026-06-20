@@ -14,12 +14,15 @@
   </div>
   <div>
     <b>Saldo</b>:
-    <span [class]="cliente.saldo | classPorValor">
+    <span
+      [class]="cliente.saldo | classPorValor"
+      [appVenderContrato]="'Preocupado com seu saldo? Assine o plano Plus!'"
+    >
       {{cliente.saldo | currency}}
     </span>
   </div>
   @if (cliente.creditoPreAprovado > 0) {
-    <div>
+    <div appVenderContrato="Quer mais crédito pré-aprovado? Assine o plano Zord!">
       <b>Crédito pré-aprovado</b>:
       <span [class]="cliente.creditoPreAprovado | classPorValor:classesContextuais">
         {{cliente.creditoPreAprovado | currency}}

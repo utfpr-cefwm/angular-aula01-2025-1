@@ -7,6 +7,7 @@ import {
   ClassPorValorPipe,
 } from '../../pipes/class-por-valor.pipe';
 import { Contrato } from '../../models/contrato';
+import { VenderContratoDirective } from '../../directives/vender-contrato.directive';
 
 @Component({
   selector: 'app-consulta-saldo',
@@ -14,6 +15,7 @@ import { Contrato } from '../../models/contrato';
   imports: [
     CommonModule,
     ClassPorValorPipe,
+    VenderContratoDirective,
   ],
   templateUrl: './consulta-saldo.component.html',
   styleUrl: './consulta-saldo.component.css',
