@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Cliente } from '../../models/cliente';
-import { ClassPorValorPipe } from '../../pipes/class-por-valor.pipe';
+import {
+  ClassNamesDeValor,
+  ClassPorValorPipe,
+} from '../../pipes/class-por-valor.pipe';
 
 @Component({
   selector: 'app-consulta-saldo',
@@ -15,6 +18,10 @@ import { ClassPorValorPipe } from '../../pipes/class-por-valor.pipe';
   styleUrl: './consulta-saldo.component.css',
 })
 export class ConsultaSaldoComponent {
+
+  protected classesContextuais: ClassNamesDeValor = {
+    positivo:'positivo destaque',
+  };
 
   public cliente: Cliente = new Cliente(
     'Maria das Couves',

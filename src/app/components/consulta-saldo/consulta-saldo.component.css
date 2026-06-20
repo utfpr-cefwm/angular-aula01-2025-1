@@ -10,3 +10,6 @@
 .negativo {
   color: red;
 }
+.positivo.destaque {
+  font-weight: bold;
+}
