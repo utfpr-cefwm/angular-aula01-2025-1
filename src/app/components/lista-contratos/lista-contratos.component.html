@@ -1,0 +1,9 @@
+<h2>Escolha o seu plano</h2>
+<div *ngFor="let contrato of contratosPossiveis">
+  <a
+    href="#"
+    class="contrato {{contrato.cor}}"
+  >
+    {{ contrato.nome }}
+  </a>
+</div>

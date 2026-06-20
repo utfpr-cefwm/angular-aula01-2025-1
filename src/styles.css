@@ -1,0 +1,19 @@
+.contrato {
+  display: inline-block;
+  border-radius: .2em;
+  padding: .2em .5em;
+  margin-left: .5em;
+}
+
+.contrato.branco {
+  background-color: aliceblue;
+  color: darkslategray;
+}
+.contrato.azul {
+  background-color: lightblue;
+  color: darkblue;
+}
+.contrato.preto {
+  background-color: black;
+  color: white;
+}
