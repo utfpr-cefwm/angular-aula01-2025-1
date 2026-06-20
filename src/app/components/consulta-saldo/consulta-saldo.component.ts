@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Cliente } from '../../models/cliente';
@@ -6,6 +6,7 @@ import {
   ClassNamesDeValor,
   ClassPorValorPipe,
 } from '../../pipes/class-por-valor.pipe';
+import { Contrato } from '../../models/contrato';
 
 @Component({
   selector: 'app-consulta-saldo',
@@ -28,5 +29,9 @@ export class ConsultaSaldoComponent {
     99.99,
     new Date(),
   );
+
+  @Input({
+  })
+  public contrato?: Contrato;
 
 }

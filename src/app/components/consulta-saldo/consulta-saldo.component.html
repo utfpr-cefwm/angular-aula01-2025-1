@@ -5,6 +5,12 @@
   </div>
   <div>
     <b>Cliente</b>: {{cliente.nome | uppercase}}
+    <span
+      *ngIf="contrato"
+      class="contrato {{contrato.cor}}"
+    >
+      {{contrato.nome}}
+    </span>
   </div>
   <div>
     <b>Saldo</b>:
